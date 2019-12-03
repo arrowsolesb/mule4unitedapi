@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: flights API
+baseUri: http://localhost:8081/api
+/unitedFlights:
+  get: 
+    responses: 
+      200:
+        body: 
+          application/json: 
+           example: !include examples/listAllUnitedFlights-get-response.json
+
+  /{destiantion}:
+      get: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/unitedFlightsByDestination-get-response.json
